@@ -3,7 +3,7 @@
 \name{mlr_learners_dens.logspline}
 \alias{mlr_learners_dens.logspline}
 \alias{LearnerDensLogspline}
-\title{Density Local Estimator Learner}
+\title{Density Logspline Learner}
 \description{
 A \link[mlr3proba:LearnerDens]{mlr3proba::LearnerDens} implementing logspline from package
 \CRANpkg{logspline}.

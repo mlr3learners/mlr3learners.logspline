@@ -1,4 +1,4 @@
-#' @title Density Local Estimator Learner
+#' @title Density Logspline Learner
 #'
 #' @name mlr_learners_dens.logspline
 #'
