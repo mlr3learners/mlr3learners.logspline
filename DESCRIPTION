@@ -21,7 +21,7 @@ Imports:
 Suggests:
     checkmate,
     distr6,
-    locfit,
+    logspline,
     rmarkdown,
     testthat
 Remotes:
