@@ -3,7 +3,7 @@
 #' @name mlr_learners_dens.logspline
 #'
 #' @description
-#' A [mlr3::LearnerDens] implementing logspline from package
+#' A [mlr3proba::LearnerDens] implementing logspline from package
 #'   \CRANpkg{logspline}.
 #' Calls [logspline::logspline()].
 #'

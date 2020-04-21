@@ -6,7 +6,8 @@
 \alias{mlr3learners.logspline-package}
 \title{mlr3learners.logspline: Learners from the {logspline} package for 'mlr3'}
 \description{
-Adds learners from the {logspline} package to 'mlr3'.
+Adds learners from the {logspline} package to
+    'mlr3'.
 }
 \author{
 \strong{Maintainer}: Raphael Sonabend \email{raphael.sonabend.15@ucl.ac.uk}
