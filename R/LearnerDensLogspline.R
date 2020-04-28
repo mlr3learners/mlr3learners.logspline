@@ -59,27 +59,23 @@ LearnerDensLogspline = R6Class("LearnerDensLogspline",
 
       fit = mlr3misc::invoke(logspline::logspline, x = data, .args = pars)
 
-      pdf <- function(x1) {
-      }
-      body(pdf) <- substitute({
+      pdf = function(x1) {} #nolint
+      body(pdf) = substitute({
         mlr3misc::invoke(logspline::dlogspline, q = x1, fit = fit)
       })
 
-      cdf <- function(x1) {
-      }
-      body(cdf) <- substitute({
+      cdf = function(x1) {} #nolint
+      body(cdf) = substitute({
         mlr3misc::invoke(logspline::plogspline, q = x1, fit = fit)
       })
 
-      quantile <- function(x1) {
-      }
-      body(quantile) <- substitute({
+      quantile = function(x1) {} #nolint
+      body(quantile) = substitute({
         mlr3misc::invoke(logspline::qlogspline, p = x1, fit = fit)
       })
 
-      rand <- function(x1) {
-      }
-      body(rand) <- substitute({
+      rand = function(x1) {} #nolint
+      body(rand) = substitute({
         mlr3misc::invoke(logspline::rlogspline, n = x1, fit = fit)
       })
 
