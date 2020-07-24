@@ -59,30 +59,30 @@ LearnerDensLogspline = R6Class("LearnerDensLogspline",
 
       fit = mlr3misc::invoke(logspline::logspline, x = data, .args = pars)
 
-      pdf = function(x1) {} #nolint
+      pdf = function(x) {} #nolint
       body(pdf) = substitute({
-        mlr3misc::invoke(logspline::dlogspline, q = x1, fit = fit)
+        mlr3misc::invoke(logspline::dlogspline, q = x, fit = fit)
       })
 
-      cdf = function(x1) {} #nolint
+      cdf = function(x) {} #nolint
       body(cdf) = substitute({
-        mlr3misc::invoke(logspline::plogspline, q = x1, fit = fit)
+        mlr3misc::invoke(logspline::plogspline, q = x, fit = fit)
       })
 
-      quantile = function(x1) {} #nolint
+      quantile = function(x) {} #nolint
       body(quantile) = substitute({
-        mlr3misc::invoke(logspline::qlogspline, p = x1, fit = fit)
+        mlr3misc::invoke(logspline::qlogspline, p = x, fit = fit)
       })
 
-      rand = function(x1) {} #nolint
+      rand = function(x) {} #nolint
       body(rand) = substitute({
-        mlr3misc::invoke(logspline::rlogspline, n = x1, fit = fit)
+        mlr3misc::invoke(logspline::rlogspline, n = x, fit = fit)
       })
 
       distr6::Distribution$new(
         name = "Logspline Density Estimator",
         short_name = "LogsplineDens",
-        pdf = pdf, cdf = cdf, quantile = quantile, rand = rand)
+        pdf = pdf, cdf = cdf, quantile = quantile, rand = rand, type = set6::Reals$new())
 
     },
 
