@@ -69,14 +69,14 @@ LearnerDensLogspline = R6Class("LearnerDensLogspline",
         mlr3misc::invoke(logspline::plogspline, q = x, fit = fit)
       })
 
-      quantile = function(x) {} #nolint
+      quantile = function(p) {} #nolint
       body(quantile) = substitute({
-        mlr3misc::invoke(logspline::qlogspline, p = x, fit = fit)
+        mlr3misc::invoke(logspline::qlogspline, p = p, fit = fit)
       })
 
-      rand = function(x) {} #nolint
+      rand = function(n) {} #nolint
       body(rand) = substitute({
-        mlr3misc::invoke(logspline::rlogspline, n = x, fit = fit)
+        mlr3misc::invoke(logspline::rlogspline, n = n, fit = fit)
       })
 
       distr6::Distribution$new(
